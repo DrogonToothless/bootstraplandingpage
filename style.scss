@@ -9,10 +9,33 @@
     background-size: 100%;
     width: 100%;
     .content {
-        width: variables.$content-max;
-        justify-content: center;
+        max-width: variables.$content-max;
         margin: 0 auto;
-        padding-top: 100px;
+        padding-top: 150px;
+        display: flex;
+        h3 {
+            margin-bottom: 20px;
+            font-size: 37px;
+        }
+        .devcourse-logo {
+            width: 750px;
+            height: 150px;
+            background-image: url(images/DevCourseLogo.png);
+            background-size: 100%;
+            margin-bottom: 50px;
+        }
+        h1 {
+            margin-bottom: 70px;
+            font-size: 60px;
+        }
+        button {
+            background-color: variables.$purple;
+            border: none;
+            width: 300px;
+            height: 70px;
+            font-weight: 500;
+            margin-bottom: 70px;
+        }
     }
 }
 .bottom-nav {
