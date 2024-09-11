@@ -64,16 +64,19 @@
 
 .bottom-nav {
   background-color: rgb(230, 230, 230);
+  height: 80px;
 }
 .bottom-nav nav {
   width: 1600px;
-  margin: 0 auto;
 }
 .bottom-nav nav ul {
   list-style-type: none;
   padding: 0px;
-  width: 100%;
+  margin-top: 25px;
 }
 .bottom-nav nav ul li {
   color: #000000;
+  flex: 7;
+  font-weight: bold;
+  font-size: 20px;
 }/*# sourceMappingURL=style.css.map */
