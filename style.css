@@ -6,7 +6,8 @@
 
 .content-container {
   background-image: url(images/computerbackground.png);
-  background-size: 100%;
+  background-size: 100vw 100%;
+  background-repeat: no-repeat;
   width: 100%;
 }
 .content-container .content {
@@ -21,50 +22,50 @@
 }
 .content-container .content .devcourse-logo {
   width: 750px;
-  height: 150px;
+  aspect-ratio: 5/1;
   background-image: url(images/DevCourseLogo.png);
   background-size: 100%;
   margin-bottom: 50px;
 }
 .content-container .content h1 {
-  margin-bottom: 70px;
+  margin: 0px 50px 70px 50px;
   font-size: 60px;
+  text-align: center;
 }
 .content-container .content button {
   background-color: rgb(146, 69, 255);
   border: none;
   width: 300px;
-  height: 70px;
+  aspect-ratio: 4.3/1;
   font-weight: 500;
   margin-bottom: 70px;
 }
 .content-container .content .infoblocks {
-  height: 80px;
   margin-bottom: 50px;
+  width: 90%;
 }
 .content-container .content .infoblocks .infoblock {
-  width: 150px;
-  margin: 0px 200px;
+  flex: 3;
+  align-items: center;
+  flex-direction: column;
 }
-.content-container .content .infoblocks .infoblock .material-symbols-outlined {
+.content-container .content .infoblocks .infoblock .infoblock-toprow .material-symbols-outlined {
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
-.content-container .content .infoblocks .infoblock .material-symbols-outlined {
+.content-container .content .infoblocks .infoblock .infoblock-toprow .material-symbols-outlined {
   height: 25px;
 }
-.content-container .content .infoblocks .infoblock p {
+.content-container .content .infoblocks .infoblock .infoblock-toprow p {
   margin-left: 5px;
   height: 25px;
 }
 .content-container .content .infoblocks .divider {
-  height: 100%;
   border: 1px solid rgb(105, 105, 105);
-  opacity: 50%;
+  opacity: 80%;
 }
 
 .bottom-nav {
   background-color: rgb(230, 230, 230);
-  height: 80px;
 }
 .bottom-nav nav {
   width: 1600px;
@@ -79,4 +80,56 @@
   flex: 7;
   font-weight: bold;
   font-size: 20px;
+}
+
+@media (max-width: 800px) {
+  .content-container .content h3 {
+    font-size: 25px;
+  }
+  .content-container .content .devcourse-logo {
+    width: 500px;
+  }
+  .content-container .content h1 {
+    font-size: 45px;
+  }
+  .content-container .content button {
+    width: 200px;
+    font-size: 18px;
+  }
+  .bottom-nav nav ul {
+    flex-direction: column;
+  }
+  .bottom-nav nav ul li {
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 500px) {
+  .content-container .content h3 {
+    font-size: 17px;
+  }
+  .content-container .content .devcourse-logo {
+    width: 350px;
+  }
+  .content-container .content h1 {
+    font-size: 30px;
+  }
+  .content-container .content .infoblocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .content-container .content .infoblocks .divider {
+    width: 50%;
+    margin: 10px 0px;
+  }
+}
+@media (max-width: 380px) {
+  .content-container .content h3 {
+    font-size: 13px;
+  }
+  .content-container .content .devcourse-logo {
+    width: 250px;
+  }
+  .content-container .content h1 {
+    font-size: 18px;
+  }
 }/*# sourceMappingURL=style.css.map */

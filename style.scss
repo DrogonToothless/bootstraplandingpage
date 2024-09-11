@@ -6,7 +6,8 @@
 }
 .content-container {
     background-image: url(images/computerbackground.png);
-    background-size: 100%;
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
     width: 100%;
     .content {
         max-width: variables.$content-max;
@@ -19,55 +20,62 @@
         }
         .devcourse-logo {
             width: 750px;
-            height: 150px;
+            aspect-ratio: 5/1;
             background-image: url(images/DevCourseLogo.png);
             background-size: 100%;
             margin-bottom: 50px;
         }
         h1 {
-            margin-bottom: 70px;
+            margin: 0px 50px 70px 50px;
             font-size: 60px;
+            text-align: center;
         }
         button {
             background-color: variables.$purple;
             border: none;
             width: 300px;
-            height: 70px;
+            aspect-ratio: 4.3/1;
             font-weight: 500;
             margin-bottom: 70px;
         }
         .infoblocks {
-            height: 80px;
             margin-bottom: 50px;
+            width: 90%;
             .infoblock {
-                width: 150px;
-                margin: 0px 200px;
-                .material-symbols-outlined {
-                    font-variation-settings:
-                    'FILL' 0,
-                    'wght' 400,
-                    'GRAD' 0,
-                    'opsz' 24
+                flex: 3;
+                align-items: center;
+                flex-direction: column;
+                .infoblock-toprow {
+                    .material-symbols-outlined {
+                        font-variation-settings:
+                        'FILL' 0,
+                        'wght' 400,
+                        'GRAD' 0,
+                        'opsz' 24
+                    }
+                    .material-symbols-outlined {
+                        height: 25px;
+                    }
+                    p {
+                        margin-left: 5px;
+                        height: 25px;
+                    }
                 }
-                .material-symbols-outlined {
-                    height: 25px;
-                }
-                p {
-                    margin-left: 5px;
-                    height: 25px;
+                .infoblock-bottomrow {
+                    h4 {
+
+                    }
                 }
             }
             .divider {
-                height: 100%;
                 border: 1px solid variables.$gray;
-                opacity: 50%;
+                opacity: 80%;
             }
         }
     }
 }
 .bottom-nav {
     background-color: variables.$lightgray;
-    height: 80px;
     nav {
         width: variables.$content-max;
         ul {
@@ -79,6 +87,73 @@
                 flex: 7;
                 font-weight: bold;
                 font-size: 20px;
+            }
+        }
+    }
+}
+@media (max-width: 800px) {
+    .content-container {
+        .content {
+            h3 {
+                font-size: 25px;
+            }
+            .devcourse-logo {
+                width: 500px;
+            }
+            h1 {
+                font-size: 45px;
+            }
+            button {
+                width: 200px;
+                font-size: 18px;
+            }
+        }
+    }
+    .bottom-nav {
+        nav {
+            ul {
+                flex-direction: column;
+                li {
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .content-container {
+        .content {
+            h3 {
+                font-size: 17px;
+            }
+            .devcourse-logo {
+                width: 350px;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .infoblocks {
+                flex-direction: column;
+                align-items: center;
+                .divider {
+                    width: 50%;
+                    margin: 10px 0px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 380px) {
+    .content-container {
+        .content {
+            h3 {
+                font-size: 13px;
+            }
+            .devcourse-logo {
+                width: 250px;
+            }
+            h1 {
+                font-size: 18px;
             }
         }
     }
